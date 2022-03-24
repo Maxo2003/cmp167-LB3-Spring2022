@@ -1,67 +1,71 @@
-# Array: A collection of elements of the data type with a fixed size.
-## Syntax:
+# Classes - ADT: Written description of the attributes or behaviors of an object
 
-	DataTypeOfElements [] nameOfArray = {element1, element2, element3};
-	DataTypeOfElements [] nameOfArray = new DataTypeOfElements[sizeOfArray];
-	DataTypeOfElements [] nameOfArray = new DataTypeOfElements[]{element1, element2, element3,..., elementN}; 
-	
-	
-	
-# Semantics
--	Hold a space in memory
--	Store the references of it into a variable
-	
-	
-# Indexes to identify each sub-container in the array, the first index is zero
+## Mammalia Class: Warm blooded, fur/hair, teeth, milk /
+## Classifying/ grouping based on common features
 
-## Accessing an array
-
-	nameOfArray[index];
+	accessModifier class NameOfClass {
 	
-## Get length of an array
-	nameOfArray.length();
-	
-	
-## Replacing a value at specific index
-	nameOfArray[index] = newElement;
-	
-## Example
-
-	String [] names = {"Maria", "Azis", "Galin", "Galena"};
-
-	System.out.println(names[1]); // -> Azis
-	
-	names[0] = "Celine Dion"; // {"Celine Dion", "Azis", "Galin", "Galena"}
-
-	int aLength = names.length; // 4
-	
-	names[3]; // Galena
-	
-	//Last index ==> length - 1
-	names[names.length -1;] // Gives the last element (Galena)
-	//---------------------------------------------------------------------------------
-	int [] numbers = new int[100];
-	numbers[0] = 54;
-	
-	//---------------------------------------------------------------------------------
-	double [] balances =  new double[]{45.23, 46.05, 50.47];
-	balances.length; // 3
-	//---------------------------------------------------------------------------------
-	
-#	Iterating though an array, traversing an array
-
-	for(int i = 0; i < nameOfArray.length; i++)
-	{
-		nameOfArray[i] = modifying;
 	}
+	
+## Attributes : instance variables
 
-	for( DataType temp : nameOfArray) {
-		System.out.println(temp);
+## Behaviors	: instance methods
+
+## Instance/Object: Instance of a class physical representation of the class
+
+# Constructor: special method that shares the same name of the class and Instantiates the object and initializes the instance variable
+
+# Setters: Mutators : modifies the values of the instance variables
+# Getters: Accessors : Reetrives the values of the instance variables 
+
+# Examples:
+
+	public class House {
+		private int numOfWindoes;
+		private String Color;
+		private int numDoors;
+		private int numOfRooms;
+		private double cost;
+		
+		public House(){
+			this.numWindows = 1;
+			this.color      = "blue";
+			this.numDoors   = 1;
+			this.numRooms   = 2;
+			this.cost       = 250000.00;
+		}
+		public House(int numWindows, String color, int numDoors, int numRooms, double cost){
+			this.numWindows = numWindows;
+			this.color      = color;
+			this.numDoors   = numDoors;
+			this.numRooms   = numRooms;
+			this.cost       = cost;
+		}
+		
+		public void setNumWindoes(int numWindows){
+			this.numWindows = numWindows;
+		}
+		
+		public void setColor(String Color){
+			this.color = color;
+		}
+		
+		public int getNumWindows() {
+			return this.numWindows;
+		}
+		
+		public String getColor() {
+			return this.color;
+		}
 	}
+	
+# Object Oriented Programming Language
+# Encapsulation : restricting the access to instance data by encapsulating the data and providing the access through getter & setter methods  
+# Polymorphism
+# Inheritance
+# Abstraction
+	
+	
 
-# Arrays class
-	//import the Arrays class
 
-	System.out.println(Arrays.toString(nameOfArray);
 
-  
